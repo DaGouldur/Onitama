@@ -9,12 +9,12 @@ package onitama_golchenko_guette;
  *
  * @author dagou
  */
-public class Pion {
+public class Piece {
     String Couleur;//On crée une variable couleur
-    public Pion(String uneCouleur){ //On initialise la couleur du jeton avec le paramètre
+    boolean Roi;
+    public Piece(String uneCouleur){ //On initialise la couleur du jeton avec le paramètre
         Couleur=uneCouleur;
-        
-        
+        Roi=false;
     }
     public String lireCouleur(){//Renvoie la couleur du jeton
       return Couleur;

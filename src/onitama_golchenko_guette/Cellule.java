@@ -10,45 +10,36 @@ package onitama_golchenko_guette;
  * @author dagou
  */
 public class Cellule {
-    Pion PionCourant;
-    Roi RoiCourant;
+    Piece PieceCourante;
     boolean PresenceAdversaire;
     boolean trone;
+  
     public Cellule(){
-    PionCourant=null;
     PresenceAdversaire=false;
-    RoiCourant=null;
+    PieceCourante=null;
     trone=false;
     }
-    public boolean ajoutPion(Pion LePionCourant){
-        if (PionCourant==null){//Ici on renvoie true si l'ajout c'est bien passé
-            PionCourant=LePionCourant;
+    public boolean ajoutPion(Piece LaPieceCourante){
+        if (PieceCourante==null){//Ici on renvoie true si l'ajout c'est bien passé
+            PieceCourante=LaPieceCourante;
            return true;
         }
         return false;// Renvoie false sinon
     }
     public boolean supprimerFigure(){
-        if (PionCourant!=null){
-            PionCourant=null;
+        if (PieceCourante!=null){
+            PieceCourante=null;
             return true;
         }
-        else if (RoiCourant!=null){
-        return true;
-        }
-        else{
-            return false;
-        }
+        return false;
     }
      public String lireCouleurDeFigure(){//Renvoie la couleur de la figure de la cellule
-        if (PionCourant==null && RoiCourant==null){//Ici on traîte le cas si il n'y a pas de figure
+        if (PieceCourante==null ){//Ici on traîte le cas si il n'y a pas de figure
             return "pas de figure";
         }
-        else if (PionCourant!=null){
-        return PionCourant.Couleur;//Renvoie la couleur du pion
-        }
-        else{
-            return RoiCourant.Couleur; //Renvoi la couleur du roi
-        }
+        return PieceCourante.Couleur;//Renvoie la couleur de la piece
+        
+      
     }
         
      public boolean placerTrone(){//Ajoute un trou trone 
