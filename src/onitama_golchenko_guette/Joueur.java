@@ -12,5 +12,7 @@ package onitama_golchenko_guette;
 public class Joueur {
     String Nom;
     String Couleur;
-    Jeton [] ListeJetons = new Jeton [21];
+    Pion [] ListeJetons = new Pion [4];
+    Roi LeRoi=new Roi;
+    
 }
