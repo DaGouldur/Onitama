@@ -15,6 +15,7 @@ public class Cellule {
     public Cellule(){
     PionCourant=null;
     PresenceAdversaire=false;
+    Roi RoiCourant;
 }
     public boolean ajoutPion(Pion LePionCourant){
         if (PionCourant==null){//Ici on renvoie true si l'ajout c'est bien passé
@@ -22,5 +23,12 @@ public class Cellule {
            return true;
         }
         return false;// Renvoie false sinon
+    }
+    public boolean supprimerFigure(){
+        if (PionCourant!=null){
+            PionCourant=null;
+            return true;
+        }
+        return false;
     }
 }

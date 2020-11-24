@@ -13,6 +13,12 @@ public class Joueur {
     String Nom;
     String Couleur;
     Pion [] ListeJetons = new Pion [4];
-    Roi LeRoi=new Roi;
-    
+    Roi [] LeRoi=new Roi[1];
+    public Joueur(String Lenom){//On initialise le nom du joueur
+        Nom = Lenom;
+    }
+     public void affecterCouleur(String Lacouleur){//Affecte une couleur à chaque joueurs
+        Couleur = Lacouleur;
+    }
+     
 }
