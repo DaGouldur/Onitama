@@ -12,8 +12,9 @@ package onitama_golchenko_guette;
 public class Joueur {
     String Nom;
     String Couleur;
-    Pion [] ListeJetons = new Pion [4];
+    Pion [] ListePions = new Pion [4];
     Roi [] LeRoi=new Roi[1];
+    CartesDeplacement [] Cartes= new  CartesDeplacement [2];
     public Joueur(String Lenom){//On initialise le nom du joueur
         Nom = Lenom;
     }

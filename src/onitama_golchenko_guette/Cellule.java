@@ -11,12 +11,15 @@ package onitama_golchenko_guette;
  */
 public class Cellule {
     Pion PionCourant;
+    Roi RoiCourant;
     boolean PresenceAdversaire;
+    boolean trone;
     public Cellule(){
     PionCourant=null;
     PresenceAdversaire=false;
-    Roi RoiCourant;
-}
+    RoiCourant=null;
+    trone=false;
+    }
     public boolean ajoutPion(Pion LePionCourant){
         if (PionCourant==null){//Ici on renvoie true si l'ajout c'est bien passé
             PionCourant=LePionCourant;
@@ -29,6 +32,35 @@ public class Cellule {
             PionCourant=null;
             return true;
         }
-        return false;
+        else if (RoiCourant!=null){
+        return true;
+        }
+        else{
+            return false;
+        }
     }
+     public String lireCouleurDeFigure(){//Renvoie la couleur de la figure de la cellule
+        if (PionCourant==null && RoiCourant==null){//Ici on traîte le cas si il n'y a pas de figure
+            return "pas de figure";
+        }
+        else if (PionCourant!=null){
+        return PionCourant.Couleur;//Renvoie la couleur du pion
+        }
+        else{
+            return RoiCourant.Couleur; //Renvoi la couleur du roi
+        }
+    }
+        
+     public boolean placerTrone(){//Ajoute un trou trone 
+        if (trone==true){//S'il y a déjà un trone renvoie false
+            return false;
+        }
+        else{//Ici on place le trone et on renvoie true
+            trone=true;
+            return true;
+        }
+    }
+     public boolean presenceTrone(){
+         return trone;
+     }
 }
