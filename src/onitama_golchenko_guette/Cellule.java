@@ -42,7 +42,7 @@ public class Cellule {
       
     }
         
-     public boolean placerTrone(){//Ajoute un trou trone 
+     public boolean placerTrone(){//Ajoute un trone 
         if (trone==true){//S'il y a déjà un trone renvoie false
             return false;
         }
