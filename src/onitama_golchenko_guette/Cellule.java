@@ -19,21 +19,21 @@ public class Cellule {
     PieceCourante=null;
     trone=false;
     }
-    public boolean ajoutPion(Piece LaPieceCourante){
+    public boolean ajoutPiece(Piece LaPieceCourante){
         if (PieceCourante==null){//Ici on renvoie true si l'ajout c'est bien passé
             PieceCourante=LaPieceCourante;
            return true;
         }
         return false;// Renvoie false sinon
     }
-    public boolean supprimerFigure(){
+    public boolean supprimerPiece(){
         if (PieceCourante!=null){
             PieceCourante=null;
             return true;
         }
         return false;
     }
-     public String lireCouleurDeFigure(){//Renvoie la couleur de la figure de la cellule
+     public String lireCouleurPiece(){//Renvoie la couleur de la figure de la cellule
         if (PieceCourante==null ){//Ici on traîte le cas si il n'y a pas de figure
             return "pas de figure";
         }
