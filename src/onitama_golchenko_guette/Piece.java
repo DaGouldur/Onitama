@@ -19,6 +19,9 @@ public class Piece {
     public String lireCouleur(){//Renvoie la couleur du jeton
       return Couleur;
     }
+    public boolean lireRole(){
+        return Roi;
+    }
      @Override
     public String toString(){//On remplace la couleur par l'initial et la couleur d'affichage associé
         if("Rouge".equals(Couleur)){
