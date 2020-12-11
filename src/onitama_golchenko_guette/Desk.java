@@ -10,5 +10,6 @@ package onitama_golchenko_guette;
  * @author dagou
  */
 public class Desk {
+    CartesDeplacement [] ListeCarte = new CartesDeplacement [16];
     
 }

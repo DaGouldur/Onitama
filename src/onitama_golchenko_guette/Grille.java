@@ -10,5 +10,5 @@ package onitama_golchenko_guette;
  * @author dagou
  */
 public class Grille {
-    Cellule [][] Cellules = new Cellule [6][7];
+    Cellule [][] Cellules = new Cellule [5][5];
 }

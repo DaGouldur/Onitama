@@ -10,5 +10,9 @@ package onitama_golchenko_guette;
  * @author dagou
  */
 public class Throne {
+    String Couleur;
     
+    public String lireCouleur(){//Renvoie la couleur du trone
+      return Couleur;
+    }
 }
